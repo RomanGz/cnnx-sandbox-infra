@@ -1,5 +1,9 @@
 terraform {
-  backend "http" {
+  cloud {
+    organization = "connexity"
+    workspaces {
+      name = "cnnx-sandbox-infra"
+    }
   }
 }
 
