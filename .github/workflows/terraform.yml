@@ -1,6 +1,7 @@
 name: 'Terraform test'
 env:
   GOOGLE_CREDENTIALS: ${{ secrets.TERRAFORM_SA_CNNX_SANDBOX_INFRA }}
+  REPOSITORY_VAR: ${{ github.event.repository.name }}
 on:
   push:
     branches: [ "master" ]
