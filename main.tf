@@ -1,12 +1,3 @@
-terraform {
-  cloud {
-    organization = "connexity"
-    workspaces {
-      name = "cnnx-sandbox-infra"
-    }
-  }
-}
-
 variable "gcp_project" {
   type = string
 }
