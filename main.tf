@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "cnx-terraform-states"
+    bucket  = "cnx_terraform_states"
     prefix  = "terraform/state"
   }
 }
