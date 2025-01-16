@@ -1,6 +1,6 @@
 name: 'Terraform test'
 env:
-  GOOGLE_APPLICATION_CREDENTIALS: /home/runner/tf_sa.json
+  #GOOGLE_APPLICATION_CREDENTIALS: /home/runner/tf_sa.json
   GOOGLE_CREDENTIALS: ${{ secrets.TERRAFORM_SA_CNNX_SANDBOX_INFRA }}
   TF_VAR_gcp_project: ${{ github.event.repository.name }}
 on:
@@ -24,8 +24,8 @@ jobs:
 
     steps:
     # Checkout the repository to the GitHub Actions runner
-    - name: write SA file
-      run: printf "$GOOGLE_CREDENTIALS" > $GOOGLE_APPLICATION_CREDENTIALS;echo $GOOGLE_APPLICATION_CREDENTIALS
+    #- name: write SA file
+    #  run: printf "$GOOGLE_CREDENTIALS" > $GOOGLE_APPLICATION_CREDENTIALS;echo $GOOGLE_APPLICATION_CREDENTIALS
     - name: Checkout
       uses: actions/checkout@v4
 
