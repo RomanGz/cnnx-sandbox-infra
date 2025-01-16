@@ -24,7 +24,7 @@ jobs:
 
     steps:
     # Checkout the repository to the GitHub Actions runner
-    - nmae: write SA file
+    - name: write SA file
       run: printf "$GOOGLE_CREDENTIALS" > $GOOGLE_APPLICATION_CREDENTIALS;echo $GOOGLE_APPLICATION_CREDENTIALS
     - name: Checkout
       uses: actions/checkout@v4
