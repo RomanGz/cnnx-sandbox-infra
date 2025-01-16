@@ -1,6 +1,6 @@
 name: 'Terraform test'
 env:
-  GOOGLE_APPLICATION_CREDENTIALS: $HOME/tf_sa.json
+  GOOGLE_APPLICATION_CREDENTIALS: /home/runner/tf_sa.json
   GOOGLE_CREDENTIALS: ${{ secrets.TERRAFORM_SA_CNNX_SANDBOX_INFRA }}
   TF_VAR_gcp_project: ${{ github.event.repository.name }}
 on:
