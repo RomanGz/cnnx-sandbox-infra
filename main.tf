@@ -1,3 +1,9 @@
+terraform {
+  backend "gcs" {
+    bucket  = "cnx-terraform-states"
+    prefix  = "terraform/state"
+  }
+}
 variable "gcp_project" {
   type = string
 }
